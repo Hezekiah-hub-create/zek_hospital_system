@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Update Appointment</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    <body>
+        <header>
+            <div>
+                <div class="logo">
+                    <img src="{% static "core/images/image.png" %}" alt="Hospital Logo">
+                    <h1 class="company-name">
+                        Hospital 
+                        <span class="M">Management</span> System
+                    </h1>
+                </div>
+            </div>
+        </header>
+    <div class="container">
+        <h2>Update Appointment</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update Appointment</button>
+        </form>
+        <a href="{% url 'list_appointments' %}">Back to Appointment List</a>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Contact us: H_M_S@gmail.com || Phone: +0000000000</p>
+                <p>&copy; 2024 Hospital Management System</p>
+            </div>
+        </div> 
+    </footer>
+</body>
+</html>

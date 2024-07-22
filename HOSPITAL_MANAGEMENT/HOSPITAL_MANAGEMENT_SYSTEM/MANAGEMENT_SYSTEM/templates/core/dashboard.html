@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div>
+            <div class="logo">
+                <img src="{% static "core/images/image.png" %}" alt="Hospital Logo">
+                <h1 class="company-name">
+                    Hospital 
+                    <span class="M">Management</span> System
+                </h1>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Welcome to the Hospital Management System</h2>
+        <p>Hello, {{ user.username }}!</p>
+        <div class="links">
+            {% if user.profile.user_type == 'administrator' %}
+                <a href="{% url 'list_patients' %}">View Patients</a>
+                <a href="{% url 'list_doctors' %}">View Doctors</a>
+                <a href="{% url 'list_appointments' %}">View Appointments</a>
+                <a href="{% url 'list_medical_records' %}">View Medical Records</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% elif user.profile.user_type == 'doctor' %}
+                <a href="{% url 'list_appointments' %}">My Appointments</a>
+                <a href="{% url 'list_medical_records' %}">My Medical Records</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% elif user.profile.user_type == 'patient' %}
+                <a href="{% url 'list_appointments' %}">My Appointments</a>
+                <a href="{% url 'list_medical_records' %}">My Medical Records</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% elif user.profile.user_type == 'staff' %}
+                <a href="{% url 'list_patients' %}">View Patients</a>
+                <a href="{% url 'list_doctors' %}">View Doctors</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% endif %}
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Contact us: H_M_S@gmail.com || Phone: +0000000000</p>
+                <p>&copy; 2024 Hospital Management System</p>
+            </div>
+        </div> 
+    </footer>
+</body>
+</html>

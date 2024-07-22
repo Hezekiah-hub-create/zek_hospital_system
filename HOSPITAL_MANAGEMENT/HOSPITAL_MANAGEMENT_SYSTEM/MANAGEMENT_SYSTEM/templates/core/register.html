@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    <body>
+        <header>
+            <div>
+                <div class="logo">
+                    <img src="{% static "core/images/image.png" %}" alt="Hospital Logo">
+                    <h1 class="company-name">
+                        Hospital 
+                        <span class="M">Management</span> System
+                    </h1>
+                </div>
+            </div>
+        </header>
+    <div class="container">
+        <h2>Register</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <label for="user_type">User Type:</label>
+            <select name="user_type" id="user_type">
+                <option value="doctor">Doctor</option>
+                <option value="patient">Patient</option>
+                <option value="administrator">Administrator</option>
+                <option value="staff">Staff</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+        <a href="{% url 'login' %}">Login</a>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Contact us: H_M_S@gmail.com || Phone: +0000000000</p>
+                <p>&copy; 2024 Hospital Management System</p>
+            </div>
+        </div> 
+    </footer>
+</body>
+</html>

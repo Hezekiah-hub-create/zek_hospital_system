@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Doctors List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div>
+            <div class="logo">
+                <img src="{% static "core/images/image.png" %}" alt="Hospital Logo">
+                <h1 class="company-name">
+                    Hospital 
+                    <span class="M">Management</span> System
+                </h1>
+            </div>
+        </div>
+        <div class="links">
+            {% if user.profile.user_type == 'administrator' %}
+                <a href="{% url 'list_patients' %}">View Patients</a>
+                <a href="{% url 'list_doctors' %}">View Doctors</a>
+                <a href="{% url 'list_appointments' %}">View Appointments</a>
+                <a href="{% url 'list_medical_records' %}">View Medical Records</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% elif user.profile.user_type == 'doctor' %}
+                <a href="{% url 'list_appointments' %}">My Appointments</a>
+                <a href="{% url 'list_medical_records' %}">My Medical Records</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% elif user.profile.user_type == 'patient' %}
+                <a href="{% url 'list_appointments' %}">My Appointments</a>
+                <a href="{% url 'list_medical_records' %}">My Medical Records</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% elif user.profile.user_type == 'staff' %}
+                <a href="{% url 'list_patients' %}">View Patients</a>
+                <a href="{% url 'list_doctors' %}">View Doctors</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% endif %}
+        </div>
+    </header>
+    <div class="container">
+        <h2>Doctors List</h2>
+        <a href="{% url 'add_doctor' %}">Add New Doctor</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Contact</th>
+                    <th>Specialty</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for doctor in doctors %}
+                <tr>
+                    <td>{{ doctor.first_name }}</td>
+                    <td>{{ doctor.last_name }}</td>
+                    <td>{{ doctor.contact }}</td>
+                    <td>{{ doctor.specialty }}</td>
+                    <td>
+                        <a href="{% url 'update_doctor' doctor.pk %}">Edit</a>
+                        <a href="{% url 'delete_doctor' doctor.pk %}">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Contact us: H_M_S@gmail.com || Phone: +0000000000</p>
+                <p>&copy; 2024 Hospital Management System</p>
+            </div>
+        </div> 
+    </footer>
+</body>
+</html>

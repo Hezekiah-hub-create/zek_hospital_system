@@ -1,0 +1,469 @@
+styles.css
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    text-align: center;
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.errorlist {
+    color: red;
+    list-style-type: none;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+p {
+    color: #34495e;
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #3498db;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #2980b9;
+}
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4e6f84;
+    color: #fff;
+}
+/* Forms */
+form {
+    margin: 20px 0;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #566671;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+/* Header and Footer */
+header, footer {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    margin-top: 20px;
+    width: 100%;
+    
+}
+
+aaaaaaaaaaaaaaaaa
+
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgba(239, 239, 239, 0.724);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.login-container{
+    background-color: rgba(62, 65, 64, 0.425);
+    background-size: 800px 900px;
+    padding: 20px;
+    border-radius: 8px;
+    color: black;
+    font-size: 130%;
+    box-shadow: 0 0 40px rgba(108, 110, 110, 0.6);
+    width: 300px;
+    height: 400px;
+    margin-left: 415px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+input{
+    width: calc(100% - 20xp);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+button{
+    width: 50%;
+    padding: 6%;
+    background-color:rgba(62, 65, 64, 0.425);
+    color: #fff;
+    border: none;
+    margin: 1.5%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #000;
+}
+
+.M{
+    color: #0c6281;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.dashboard {
+    background-color: #9d9d9d;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.dashboard .btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.management {
+    background-color: #9d9d9d;
+    padding: 20px 0;
+}
+
+.management .section-heading {
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #ffffffaa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-basis: 30%;
+}
+
+.card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card .btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.card .btn:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .social-links {
+    list-style-type: none;
+    display: flex;
+}
+
+footer .social-links li {
+    margin-right: 10px;
+}
+
+/*style for patient page*/
+main {
+    padding: 2rem;
+}
+section {
+    margin-bottom: 2rem;
+}
+section h2 {
+    color: #333;
+}
+/*style for doctor page*/
+.h{
+    color: #ffffff;
+    text-align: center;
+    background-color: #444;
+}
+.cont{
+    max-width: 100%;
+    margin: 20px auto;
+   
+}
+/* .profile {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    width: 100%; 
+    display: grid;
+    align-self: center;
+    grid-template-columns: repeat(2, 3fr); 
+    grid-template-rows: repeat(2, 3fr);
+    grid-gap: 5px;
+} */
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 2rem;
+}
+
+.profile-details p {
+    margin: 0.5rem 0;
+}
+
+.contact-info{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    width: 80%;
+    max-width: 800px;
+}
+
+.contact-info h3, .appointment h3 {
+    margin-top: 0;
+} 
+
+
+/* appointment style*/
+.containe {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.h1 {
+    margin: 0;
+    color: #faf8f8;
+}
+
+.main {
+    padding: 20px;
+}
+
+.for {
+    display: flex;
+    flex-direction: column;
+}
+
+.h2 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input, select, button {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/*patients_deatil styles*/
+.content_box {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+} 
