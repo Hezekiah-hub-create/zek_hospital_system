@@ -1,11 +1,1 @@
-Runserver: python manage.py runserver 8007
 
-Superuser 👤:
--Username: Qwerty
--E-mail: qwerty@gmail.com
--Password: qwertygmailcom
-
-First user 👤:
--Username: HT
--Password: qwertyuiopasdfgh
--Type: administrator
